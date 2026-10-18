@@ -1,0 +1,85 @@
+// Auto-generated prebuilt Blueprint for prebuilts_target_openthread
+// Staged from Extractive APEX package: ext-openthread (org.blisslabs.ag.ext.openthread)
+
+package {
+    default_applicable_licenses: ["external_openthread_license"],
+}
+
+license {
+    name: "external_openthread_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-BSD",
+    ],
+    license_text: [
+        "LICENSE",
+        "NOTICE",
+    ],
+}
+
+cc_prebuilt_binary {
+    name: "ot-ctl",
+    srcs: ["bin/ot-ctl"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_prebuilt_binary {
+    name: "ot-rcp",
+    srcs: ["bin/ot-rcp"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_prebuilt_binary {
+    name: "ot-cli-ftd",
+    srcs: ["bin/ot-cli-ftd"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_prebuilt_library_static {
+    name: "ot-core",
+    srcs: ["lib/ot-core.a"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_prebuilt_library_static {
+    name: "libopenthread-cli",
+    srcs: ["lib/libopenthread-cli.a"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_prebuilt_library_static {
+    name: "openthread-posix",
+    srcs: ["lib/openthread-posix.a"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_prebuilt_library_static {
+    name: "openthread-common",
+    srcs: ["lib/openthread-common.a"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
